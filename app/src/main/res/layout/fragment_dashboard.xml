@@ -124,6 +124,9 @@
             </androidx.appcompat.widget.Toolbar>
 
 
+            <!--
+            This part can obviously be done with a view Pager. The purpose here is only to showcase navigation between fragment
+            -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"

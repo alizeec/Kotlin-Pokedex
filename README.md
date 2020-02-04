@@ -41,6 +41,7 @@ Pokedex app built with the navigation from Aircall
 
 - [x] Use the aircall-navigation to start an activity
 - [x] Use the aircall-navigation to replace a fragment
+Done in the detail of a pokemon. This part can obviously be done in the simpler way with a ViewPager. The goal here is just to showcase how to navigate between fragment with this navigation.
 - [x] Use the aircall-navigation to open a BottomSheetFragment
 - [ ] Use the aircall-navigation to start an activity for result from an activity
 - [ ] Use the aircall-navigation to start an activity for result from a fragment
