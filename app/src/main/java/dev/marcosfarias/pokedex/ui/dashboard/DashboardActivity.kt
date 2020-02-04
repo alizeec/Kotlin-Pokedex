@@ -63,12 +63,41 @@ class DashboardActivity : NavigableActivity() {
                     .placeholder(android.R.color.transparent)
                     .into(imageView)
 
-                val pager = viewPager
-                val tabs = tabs
-                pager.adapter =
-                    ViewPagerAdapter(supportFragmentManager, this, pokemon.id!!)
-                tabs.setupWithViewPager(pager)
+                about_tab.setOnClickListener {
+                    dashboardViewModel.navigateToAbout(pokemon.id!!)
+                    about_tab.setTextAppearance(R.style.TabAppearanceClicked)
+                    stats_tab.setTextAppearance(R.style.TabAppearance)
+                    evolution_tab.setTextAppearance(R.style.TabAppearance)
+                    moves_tab.setTextAppearance(R.style.TabAppearance)
+                }
+
+                stats_tab.setOnClickListener {
+                     dashboardViewModel.navigateToStats(pokemon.id!!)
+                    stats_tab.setTextAppearance(R.style.TabAppearanceClicked)
+                    about_tab.setTextAppearance(R.style.TabAppearance)
+                    evolution_tab.setTextAppearance(R.style.TabAppearance)
+                    moves_tab.setTextAppearance(R.style.TabAppearance)
+                }
+
+                evolution_tab.setOnClickListener {
+                    dashboardViewModel.navigateToEvolution(pokemon.id!!)
+                    evolution_tab.setTextAppearance(R.style.TabAppearanceClicked)
+                    about_tab.setTextAppearance(R.style.TabAppearance)
+                    stats_tab.setTextAppearance(R.style.TabAppearance)
+                    moves_tab.setTextAppearance(R.style.TabAppearance)
+                }
+
+                moves_tab.setOnClickListener {
+                    dashboardViewModel.navigateToMoves(pokemon.id!!)
+                    moves_tab.setTextAppearance(R.style.TabAppearanceClicked)
+                    about_tab.setTextAppearance(R.style.TabAppearance)
+                    evolution_tab.setTextAppearance(R.style.TabAppearance)
+                    evolution_tab.setTextAppearance(R.style.TabAppearance)
+                }
             }
         })
     }
+
+    override fun getFragmentHostId() = R.id.navHostFragment
+
 }

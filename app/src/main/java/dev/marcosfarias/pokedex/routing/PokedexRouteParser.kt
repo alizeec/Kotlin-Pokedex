@@ -23,24 +23,28 @@ class PokedexRouteParser : IRouteParser {
 
     override fun parse(destination: String, extras: Map<String, Any>?) = when (destination) {
         ABOUT -> {
+            extras.checkStringExtra("id", ABOUT)
             fragmentRoute<DashboardActivity, AboutFragment>(
                 extras,
                 fragmentTransition = createDefaultFragmentTransition()
             )
         }
         EVOLUTION -> {
+            extras.checkStringExtra("id", EVOLUTION)
             fragmentRoute<DashboardActivity, EvolutionFragment>(
                 extras,
                 fragmentTransition = createDefaultFragmentTransition()
             )
         }
         MOVES -> {
+            extras.checkStringExtra("id", MOVES)
             fragmentRoute<DashboardActivity, MovesFragment>(
                 extras,
                 fragmentTransition = createDefaultFragmentTransition()
             )
         }
         STATS -> {
+            extras.checkStringExtra("id", STATS)
             fragmentRoute<DashboardActivity, StatsFragment>(
                 extras,
                 fragmentTransition = createDefaultFragmentTransition()
@@ -48,9 +52,9 @@ class PokedexRouteParser : IRouteParser {
         }
         DASHBOARD -> {
             extras.checkStringExtra("id", DASHBOARD)
-            activityRoute<DashboardActivity>(
+            fragmentRoute<DashboardActivity, AboutFragment>(
                 extras,
-                fragmentTransition = createDefaultActivityTransition()
+                fragmentTransition = createDefaultFragmentTransition()
             )
         }
         POKEDEX -> {
