@@ -40,14 +40,17 @@ Pokedex app built with the navigation from Aircall
 ## Development Roadmap
 
 - [x] Use the aircall-navigation to start an activity
-- [x] Use the aircall-navigation to replace a fragment
-Done in the detail of a pokemon. This part can obviously be done in the simpler way with a ViewPager. The goal here is just to showcase how to navigate between fragment with this navigation.
+- [x] Use the aircall-navigation to replace a fragment. Done in the detail of a pokemon. This part can obviously be done in the simpler way with a ViewPager. The goal here is just to showcase how to navigate between fragment with this navigation.
 - [x] Use the aircall-navigation to open a BottomSheetFragment
 - [ ] Use the aircall-navigation to start an activity for result from an activity
 - [ ] Use the aircall-navigation to start an activity for result from a fragment
 - [ ] Use the aircall-navigation to navigate between fragment inside a BottomSheetFragment
 - [ ] Use the aircall-navigation to open external app like emails, camera, etc...
 - [ ] Use the aircall-navigation to propagate event to the activities/fragments in the backstack
+
+## Notes
+
+In this sample, the router is a singleton. In Aircall application we use Dagger to inject it where we need, but the goal here was to show that no external library is required to use it.
 
 ## Thanks
 - [mrcsxsiq](https://github.com/mrcsxsiq/Kotlin-Pokedex) I used mrcsxsiq's project and replaced the navigation from architecture component by our own
