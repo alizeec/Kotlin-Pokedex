@@ -3,7 +3,7 @@
   <img src="screenshots/kotlin.png" width="300" alt="Kotlin Pokedex">
 <br>
 <br>
-Pokedex app built with Kotlin
+Pokedex app built with the navigation from Aircall
 </h1>
 
 <p align="center">
@@ -14,23 +14,8 @@ Pokedex app built with Kotlin
   <a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/License-MIT-red.svg" alt="License MIT">
   </a>
-  
-  <a href="https://github.com/mrcsxsiq/Kotlin-Pokedex/stargazers">
-    <img src="https://img.shields.io/badge/Say%20Thanks-👍-1EAEDB.svg" alt="Say thanks">
-  </a>
+
 </p>
-
-## Download
-
-Go to the [releases page](https://github.com/mrcsxsiq/Kotlin-Pokedex/releases) to download the latest available apk.
-
-<!--
-Also available in Play Store
-
-<a href="https://github.com/mrcsxsiq/Kotlin-Pokedex/">
-  <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="200" alt="Play Store">
-</a>
--->
 
 ## Screenshots
 
@@ -54,38 +39,17 @@ Also available in Play Store
 
 ## Development Roadmap
 
-- [x] Kotlin
-- [x] Live data
-- [x] Navigation
-- [x] ViewModel
-- [x] Rest with retrofit
-- [x] Offline Persistence with Room
-- [x] Databinding
-- [ ] ~[Jetpack Compose](https://github.com/mrcsxsiq/Kotlin-Pokedex/issues/4)~ - See [compose-pokedex](https://github.com/zsoltk/compose-pokedex)
-- [ ] Coroutines
-- [ ] Koin
-- [ ] JUnit
-- [ ] MotionLayout
-- [ ] Transition Animations
-- [ ] DayNight
-- [ ] PokeAPI
-
-## Features
-
-- [x] Home
-- [x] Pokedex
-- [x] Pokedex - FAB
-- [x] Pokedex - Search
-- [x] Pokedex - Generation
-- [x] Pokemon Info
-- [x] Pokemon Info - About
-- [x] Pokemon Info - Base Stats
-- [ ] Pokemon Info - Evolution
-- [x] News Detail
+- [x] Use the aircall-navigation to start an activity
+- [ ] Use the aircall-navigation to replace a fragment
+- [x] Use the aircall-navigation to open a BottomSheetFragment
+- [ ] Use the aircall-navigation to start an activity for result from an activity
+- [x] Use the aircall-navigation to start an activity for result from a fragment
+- [x] Use the aircall-navigation to navigate between fragment inside a BottomSheetFragment
+- [x] Use the aircall-navigation to open external app like emails, camera, etc...
+- [x] Use the aircall-navigation to propagate event to the activities/fragments in the backstack
 
 ## Thanks
-
-- [Márton Braun](https://github.com/zsmb13) for his [article](https://zsmb.co/lets-review-pokedex/) and [code review](https://github.com/mrcsxsiq/Kotlin-Pokedex/pull/3)
+- [mrcsxsiq](https://github.com/mrcsxsiq/Kotlin-Pokedex) I used mrcsxsiq's project and replaced the navigation from architecture component by our own
 
 ## Design
 
@@ -93,22 +57,10 @@ Also available in Play Store
 
 ## Other Pokedex Projects
 
+- [mrcsxsiq](https://github.com/mrcsxsiq/Kotlin-Pokedex) - Pokedex app built with Kotlin
 - [Zsolt Kocsi](https://github.com/zsoltk/compose-pokedex) - Android on Jetpack Compose
 - [Pham Sy Hung](https://github.com/scitbiz/flutter_pokedex/) - Flutter
 
-
-## Contributors
-
-| [<img src="https://avatars3.githubusercontent.com/u/12054216?s=115&v=4" width="48"><br><sub>@zsmb13</sub>](https://github.com/zsmb13) |
-[<img src="https://avatars0.githubusercontent.com/u/8435541?s=115&v=4" width="48"><br><sub>@aesean</sub>](https://github.com/aesean) |
-[<img src="https://avatars1.githubusercontent.com/u/988405?s=115&v=4" width="48"><br><sub>@STFBEE</sub>](https://github.com/STFBEE) | 
-[<img src="https://user-images.githubusercontent.com/95717/60592969-5da81680-9d67-11e9-92a3-8664ee0e2eda.png" width="48"><br><sub>You</sub>](https://github.com/mrcsxsiq/Kotlin-Pokedex/pulls) | 
-| :---: | :---: | :---: | :---: |
-
-## Author
-
-| [<img src="https://avatars3.githubusercontent.com/u/993608?s=115&v=4" width="48"><br><sub>@mrcsxsiq</sub>](https://github.com/mrcxsiq) |
-| :---: |
 
 ## License
 
