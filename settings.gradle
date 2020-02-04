@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':navigation'
 rootProject.name='Pokedex'

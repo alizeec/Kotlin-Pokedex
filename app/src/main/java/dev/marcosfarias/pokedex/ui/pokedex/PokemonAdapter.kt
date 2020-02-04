@@ -13,6 +13,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import dev.marcosfarias.pokedex.R
 import dev.marcosfarias.pokedex.model.Pokemon
+import dev.marcosfarias.pokedex.routing.DASHBOARD
+import dev.marcosfarias.pokedex.routing.POKEDEX
+import dev.marcosfarias.pokedex.routing.RouterSingletonHolder
 import dev.marcosfarias.pokedex.utils.PokemonColorUtil
 import kotlinx.android.synthetic.main.item_pokemon.view.*
 
@@ -51,9 +54,9 @@ class PokemonAdapter(
                 .into(itemView.imageView)
 
             itemView.setOnClickListener {
-                var bundle = bundleOf("id" to item.id)
-                it.findNavController()
-                    .navigate(R.id.action_navigation_pokedex_to_navigation_dashboard, bundle)
+                item.id?.let {
+                    RouterSingletonHolder.getInstance().navigateTo(DASHBOARD, mapOf("id" to it))
+                }
             }
         }
     }

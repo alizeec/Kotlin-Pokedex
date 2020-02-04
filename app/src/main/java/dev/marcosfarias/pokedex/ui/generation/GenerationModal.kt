@@ -12,7 +12,7 @@ import dev.marcosfarias.pokedex.R
 import dev.marcosfarias.pokedex.model.Generation
 import kotlinx.android.synthetic.main.fragment_generation.*
 
-class GenerationFragment : BottomSheetDialogFragment() {
+class GenerationModal : BottomSheetDialogFragment() {
 
     private lateinit var generationViewModel: GenerationViewModel
 

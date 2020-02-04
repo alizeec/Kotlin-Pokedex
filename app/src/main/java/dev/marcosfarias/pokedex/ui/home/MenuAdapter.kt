@@ -10,6 +10,9 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import dev.marcosfarias.pokedex.R
 import dev.marcosfarias.pokedex.model.Menu
+import dev.marcosfarias.pokedex.routing.DASHBOARD
+import dev.marcosfarias.pokedex.routing.POKEDEX
+import dev.marcosfarias.pokedex.routing.RouterSingletonHolder
 import dev.marcosfarias.pokedex.utils.PokemonColorUtil
 import kotlinx.android.synthetic.main.item_pokemon.view.*
 
@@ -27,7 +30,7 @@ class MenuAdapter(
                 PorterDuffColorFilter(color, PorterDuff.Mode.SRC_ATOP)
 
             itemView.setOnClickListener {
-                it.findNavController().navigate(R.id.action_navigation_home_to_navigation_pokedex)
+                RouterSingletonHolder.getInstance().navigateTo(POKEDEX)
             }
         }
     }

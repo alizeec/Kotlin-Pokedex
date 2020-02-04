@@ -8,6 +8,9 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import dev.marcosfarias.pokedex.R
 import dev.marcosfarias.pokedex.model.News
+import dev.marcosfarias.pokedex.routing.NEWS
+import dev.marcosfarias.pokedex.routing.POKEDEX
+import dev.marcosfarias.pokedex.routing.RouterSingletonHolder
 
 class NewsAdapter(
     private val list: List<News>,
@@ -18,8 +21,8 @@ class NewsAdapter(
         fun bindView(item: News) {
 //            itemView.textViewName.text = item.title
             itemView.setOnClickListener {
-                it.findNavController()
-                    .navigate(R.id.action_navigation_home_to_navigation_news_detail)
+                RouterSingletonHolder.getInstance().navigateTo(NEWS)
+
             }
         }
     }

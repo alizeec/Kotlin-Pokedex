@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import androidx.room.Room
 import dev.marcosfarias.pokedex.database.AppDatabase
+import dev.marcosfarias.pokedex.routing.RouterSingletonHolder
 
 class App : Application() {
 
@@ -24,6 +25,7 @@ class App : Application() {
             .fallbackToDestructiveMigration()
             .build()
 
+        RouterSingletonHolder.initialize(this)
     }
 
 }
