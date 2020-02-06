@@ -37,7 +37,7 @@ Pokedex app built with the navigation from Aircall
   <img src="screenshots/news-detail.png" width="270" alt="News Detail">
 </p>
 
-## Features use din Pokedex app
+## Features used in Pokedex app
 
 - [x] Use the aircall-navigation to start an activity
 - [x] Use the aircall-navigation to replace a fragment. Done in the detail of a pokemon. This part can obviously be done in the simpler way with a ViewPager. The goal here is just to showcase how to navigate between fragment with this navigation.
