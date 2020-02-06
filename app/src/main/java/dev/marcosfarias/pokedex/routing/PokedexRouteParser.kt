@@ -16,6 +16,7 @@ import dev.marcosfarias.pokedex.ui.dashboard.evolution.EvolutionFragment
 import dev.marcosfarias.pokedex.ui.dashboard.moves.MovesFragment
 import dev.marcosfarias.pokedex.ui.dashboard.stats.StatsFragment
 import dev.marcosfarias.pokedex.ui.generation.GenerationModal
+import dev.marcosfarias.pokedex.ui.home.ThemeModal
 import dev.marcosfarias.pokedex.ui.newsdetail.NewsDetailModal
 import dev.marcosfarias.pokedex.ui.pokedex.PokedexActivity
 
@@ -68,6 +69,9 @@ class PokedexRouteParser : IRouteParser {
         }
         GENERATION -> {
             modalRoute<GenerationModal>(extras)
+        }
+        THEME -> {
+            modalRoute<ThemeModal>(extras)
         }
 
         else -> error("Unknown route")

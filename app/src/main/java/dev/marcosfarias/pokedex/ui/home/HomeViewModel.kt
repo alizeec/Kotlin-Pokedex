@@ -7,11 +7,25 @@ import dev.marcosfarias.pokedex.App
 import dev.marcosfarias.pokedex.R
 import dev.marcosfarias.pokedex.model.Menu
 import dev.marcosfarias.pokedex.model.News
+import dev.marcosfarias.pokedex.routing.RouterSingletonHolder
+import dev.marcosfarias.pokedex.routing.THEME
 
-class HomeViewModel : ViewModel() {
+class HomeViewModel : ViewModel(), ThemeViewDelegate {
 
     private val listMenu = MutableLiveData<List<Menu>>()
     private val listNews = MutableLiveData<List<News>>()
+    val colorTheme = MutableLiveData<Int>()
+
+    val router = RouterSingletonHolder.getInstance()
+
+    init {
+        router.bindViewDelegate(this)
+    }
+
+    override fun onCleared() {
+        router.unbindViewDelegate(this)
+        super.onCleared()
+    }
 
     fun getListMenu(): LiveData<List<Menu>> {
         listMenu.value = listOf(
@@ -39,4 +53,11 @@ class HomeViewModel : ViewModel() {
         return listNews
     }
 
+    fun openThemeModal(){
+        RouterSingletonHolder.getInstance().navigateTo(THEME)
+    }
+
+    override fun onThemeChanged(color: Int) {
+        colorTheme.postValue(color)
+    }
 }

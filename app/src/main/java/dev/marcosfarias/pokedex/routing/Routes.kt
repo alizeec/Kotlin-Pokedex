@@ -7,6 +7,7 @@ package dev.marcosfarias.pokedex.routing
 
  const val DASHBOARD = "dashboard"
  const val GENERATION = "generation"
+const val THEME = "theme"
  const val HOME = "home"
  const val NEWS = "news"
  const val POKEDEX = "pokedex"

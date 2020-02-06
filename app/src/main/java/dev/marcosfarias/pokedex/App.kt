@@ -25,6 +25,10 @@ class App : Application() {
             .fallbackToDestructiveMigration()
             .build()
 
+        getSharedPreferences("preferences.theme", Context.MODE_PRIVATE).edit()
+            .putInt("color", R.color.red)
+            .apply()
+
         RouterSingletonHolder.initialize(this)
     }
 

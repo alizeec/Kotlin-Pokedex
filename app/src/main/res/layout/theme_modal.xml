@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current theme: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <View
+            android:layout_width="30dp"
+            android:id="@+id/currentChoice"
+            android:layout_height="30dp"
+            tools:background="@color/red" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Pick a new theme: "
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/theme1Choice"
+            tools:background="@color/lightBlue" />
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/theme2Choice"
+            tools:background="@color/lightYellow" />
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/theme3Choice"
+            tools:background="@color/lightPurple" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/red"
     android:fitsSystemWindows="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="260dp"
         android:layout_alignParentTop="true"
+        android:id="@+id/homeHeaderWrap"
         android:layout_alignParentEnd="true"
         android:background="@color/red">
 
@@ -26,6 +26,20 @@
             android:alpha="0.10"
             android:background="@drawable/pokeball"
             android:tint="@color/white" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:padding="5dp"
+            android:id="@+id/updateThemeButton"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/transparent"
+            android:text="Update theme"/>
 
         <View
             android:layout_width="match_parent"
@@ -73,6 +87,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_bottom_border_red"
                     android:paddingTop="16dp"
+                    android:id="@+id/toolbar"
                     app:contentInsetLeft="0dp"
                     app:contentInsetStart="0dp"
                     app:elevation="0dp">

@@ -1,6 +1,8 @@
 package dev.marcosfarias.pokedex.ui.home
 
+import android.content.Context
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -21,9 +23,13 @@ class HomeActivity : NavigableActivity() {
 
         setContentView(R.layout.activity_home)
 
+        val themeColor = getSharedPreferences("preferences.theme", Context.MODE_PRIVATE).getInt("color", R.color.lightTeal)
+        homeHeaderWrap.setBackgroundColor(ContextCompat.getColor(this, themeColor))
+        toolbar.setBackgroundColor(ContextCompat.getColor(this, themeColor))
+
         homeViewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
 
-        window?.statusBarColor = PokemonColorUtil(this).convertColor(R.color.red)
+        window?.statusBarColor = PokemonColorUtil(this).convertColor(themeColor)
 
         val recyclerViewMenu = recyclerViewMenu
         val recyclerViewNews = recyclerViewNews
@@ -47,5 +53,15 @@ class HomeActivity : NavigableActivity() {
             val items: List<News> = it
             recyclerViewNews.adapter = NewsAdapter(items, this)
         })
+
+        homeViewModel.colorTheme.observe(this, Observer {
+            homeHeaderWrap.setBackgroundColor(ContextCompat.getColor(this, it))
+            toolbar.setBackgroundColor(ContextCompat.getColor(this, it))
+            window?.statusBarColor = PokemonColorUtil(this).convertColor(it)
+        })
+
+        updateThemeButton.setOnClickListener {
+            homeViewModel.openThemeModal()
+        }
     }
 }
