@@ -5,14 +5,24 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dev.marcosfarias.pokedex.R
+import dev.marcosfarias.pokedex.ui.home.ThemeViewModel
 import dev.marcosfarias.pokedex.utils.PokemonColorUtil
-
+import kotlinx.android.synthetic.main.fragment_news_detail.*
 
 class NewsDetailModal : BottomSheetDialogFragment() {
+
+    private lateinit var newsViewModel: NewsDetailViewModel
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        newsViewModel = ViewModelProviders.of(this).get(NewsDetailViewModel::class.java)
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,6 +38,10 @@ class NewsDetailModal : BottomSheetDialogFragment() {
             PokemonColorUtil(view.context).convertColor(R.color.white)
 
         makeModalFullscreen()
+
+        shareButton.setOnClickListener {
+            newsViewModel.onShareClicked()
+        }
     }
 
     private fun makeModalFullscreen() {

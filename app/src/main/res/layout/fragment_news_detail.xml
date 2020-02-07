@@ -35,6 +35,14 @@
                 android:textSize="28sp"
                 android:textStyle="bold" />
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:id="@+id/shareButton"
+                android:text="@string/news_share"
+                android:textStyle="bold" />
+
         </LinearLayout>
 
             <LinearLayout

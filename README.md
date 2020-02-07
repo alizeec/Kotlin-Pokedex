@@ -45,8 +45,8 @@ Pokedex app built with the navigation from Aircall
 - [ ] Use the aircall-navigation to start an activity for result from an activity
 - [ ] Use the aircall-navigation to start an activity for result from a fragment
 - [ ] Use the aircall-navigation to navigate between fragment inside a BottomSheetFragment
-- [ ] Use the aircall-navigation to open external app like emails, camera, etc...
-- [ ] Use the aircall-navigation to propagate event to the activities/fragments in the backstack
+- [x] Use the aircall-navigation to open external app like emails, camera, etc...  (share feature in NewsDetail)
+- [x] Use the aircall-navigation to propagate event to the activities/fragments in the backstack (change theme feature in Home)
 
 ## Notes
 
