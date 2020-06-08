@@ -13,15 +13,6 @@ import kotlinx.android.synthetic.main.fragment_about.*
 
 class AboutFragment : Fragment() {
 
-    companion object {
-        @JvmStatic
-        fun newInstance(id: String?) = AboutFragment().apply {
-            arguments = Bundle().apply {
-                putString("id", id)
-            }
-        }
-    }
-
     private lateinit var dashboardViewModel: DashboardViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {

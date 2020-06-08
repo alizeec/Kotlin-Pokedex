@@ -7,12 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.ColorRes
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dev.marcosfarias.pokedex.R
-import kotlinx.android.synthetic.main.theme_modal.*
+import kotlinx.android.synthetic.main.theme_fragment.*
 
-class ThemeModal : BottomSheetDialogFragment() {
+class ThemeFragment : Fragment() {
 
     private lateinit var themeViewModel: ThemeViewModel
     private val possibleThemes = mutableListOf(R.color.red, R.color.lightBlue, R.color.lightPurple, R.color.lightYellow)
@@ -27,7 +27,7 @@ class ThemeModal : BottomSheetDialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.theme_modal, container, false)
+        return inflater.inflate(R.layout.theme_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -49,6 +49,10 @@ class ThemeModal : BottomSheetDialogFragment() {
         theme3Choice.setBackgroundColor(ContextCompat.getColor(requireContext(), possibleThemes[2]))
         theme3Choice.setOnClickListener {
             updateTheme(possibleThemes[2])
+        }
+
+        backButton.setOnClickListener {
+            themeViewModel.clickOnNavigateBack()
         }
     }
 

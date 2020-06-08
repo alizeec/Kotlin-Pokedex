@@ -7,8 +7,8 @@ import dev.marcosfarias.pokedex.App
 import dev.marcosfarias.pokedex.R
 import dev.marcosfarias.pokedex.model.Menu
 import dev.marcosfarias.pokedex.model.News
+import dev.marcosfarias.pokedex.routing.PROFILE
 import dev.marcosfarias.pokedex.routing.RouterSingletonHolder
-import dev.marcosfarias.pokedex.routing.THEME
 
 class HomeViewModel : ViewModel(), ThemeViewDelegate {
 
@@ -53,8 +53,8 @@ class HomeViewModel : ViewModel(), ThemeViewDelegate {
         return listNews
     }
 
-    fun openThemeModal(){
-        RouterSingletonHolder.getInstance().navigateTo(THEME)
+    fun openProfileModal(){
+        RouterSingletonHolder.getInstance().navigateTo(PROFILE)
     }
 
     override fun onThemeChanged(color: Int) {

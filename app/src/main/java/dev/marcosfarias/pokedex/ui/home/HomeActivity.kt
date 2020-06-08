@@ -60,8 +60,8 @@ class HomeActivity : NavigableActivity() {
             window?.statusBarColor = PokemonColorUtil(this).convertColor(it)
         })
 
-        updateThemeButton.setOnClickListener {
-            homeViewModel.openThemeModal()
+        changeThemeButton.setOnClickListener {
+            homeViewModel.openProfileModal()
         }
     }
 }

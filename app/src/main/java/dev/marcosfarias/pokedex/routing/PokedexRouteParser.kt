@@ -8,6 +8,7 @@ import com.example.navigation.activityRoute
 import com.example.navigation.fragmentRoute
 import com.example.navigation.missingExtra
 import com.example.navigation.modalRoute
+import com.example.navigation.submodalRoute
 import com.example.navigation.wrongTypeExtra
 import dev.marcosfarias.pokedex.R
 import dev.marcosfarias.pokedex.ui.dashboard.DashboardActivity
@@ -16,7 +17,9 @@ import dev.marcosfarias.pokedex.ui.dashboard.evolution.EvolutionFragment
 import dev.marcosfarias.pokedex.ui.dashboard.moves.MovesFragment
 import dev.marcosfarias.pokedex.ui.dashboard.stats.StatsFragment
 import dev.marcosfarias.pokedex.ui.generation.GenerationModal
-import dev.marcosfarias.pokedex.ui.home.ThemeModal
+import dev.marcosfarias.pokedex.ui.home.ProfileFragment
+import dev.marcosfarias.pokedex.ui.home.ProfileModal
+import dev.marcosfarias.pokedex.ui.home.ThemeFragment
 import dev.marcosfarias.pokedex.ui.newsdetail.NewsDetailModal
 import dev.marcosfarias.pokedex.ui.pokedex.PokedexActivity
 
@@ -70,8 +73,11 @@ class PokedexRouteParser : IRouteParser {
         GENERATION -> {
             modalRoute<GenerationModal>(extras)
         }
+        PROFILE -> {
+            submodalRoute<ProfileModal, ProfileFragment>(extras)
+        }
         THEME -> {
-            modalRoute<ThemeModal>(extras)
+            submodalRoute<ProfileModal, ThemeFragment>(extras, contentTransition = createDefaultFragmentTransition())
         }
 
         else -> error("Unknown route")
